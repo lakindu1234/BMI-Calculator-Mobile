@@ -1,16 +1,28 @@
+import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class Mainpage extends StatefulWidget {
+
+
   const Mainpage({super.key});
 
   @override
   State<Mainpage> createState() => _MainpageState();
-}
+  }
 
-class _MainpageState extends State<Mainpage> {
-  int height = 150;
-  int weight = 70;
+  @override
+  Widget build(BuildContext context) {
 
-  String gender = '';
+    return Scaffold(
+        body: SafeArea(
+        child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Container(
+      color: Colors.white,
+      child: Column(
+      children: [
 
-  late double bmi = calculateBMI(height: height, weight: weight);
+        const SizedBox(height: 20),                // Gender Row
+
+    // Height and Weight Row
+    //////////////////////////////////////////////////////////////////////////////
