@@ -26,3 +26,25 @@ class Mainpage extends StatefulWidget {
 
     // Height and Weight Row
     //////////////////////////////////////////////////////////////////////////////
+
+    Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            children: [
+              const Text("Height"),
+              Text("$height", style: kInputLableColor),
+              Row(
+                children: [
+                  FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        if (height > 50) height--;
+                        bmi = calculateBMI(
+                          height: height,
+                          weight: weight,
+                        );
+                      });
+                      print(height);
+                    },
