@@ -48,3 +48,29 @@ class Mainpage extends StatefulWidget {
                       });
                       print(height);
                     },
+
+
+                    child: const Icon(Icons.remove, size: 50),
+                  ),
+                  const SizedBox(width: 50),
+                  FloatingActionButton(
+                    onPressed: () {
+                      setState(() {
+                        if (height < 250) height++;
+                        bmi = calculateBMI(
+                          height: height,
+                          weight: weight,
+                        );
+                      });
+                      print(height);
+                    },
+                    child: const Icon(Icons.add, size: 50),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+    /////////////////////////////////////////////////////////////////////////
+    const Spacer(),
+    /////////////////////////////////////////////////////////////////////////
