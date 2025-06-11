@@ -73,4 +73,27 @@ class Mainpage extends StatefulWidget {
         ),
     /////////////////////////////////////////////////////////////////////////
     const Spacer(),
-    /////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
+
+    Padding(
+      padding: const EdgeInsets.all(18.0),
+      child: Column(
+        children: [
+        const Text("Weight"),
+        Text("$weight", style: kInputLableColor),
+        Row(
+      children: [
+        FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              if (weight > 2) weight--;
+              bmi = calculateBMI(
+                height: height,
+                weight: weight,
+              );
+            });
+            print(weight);
+          },
+          child: const Icon(Icons.remove, size: 50),
+        ),
+        const SizedBox(width: 50),
