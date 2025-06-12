@@ -2,8 +2,6 @@ import 'package:bmicalculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class Mainpage extends StatefulWidget {
-
-
   const Mainpage({super.key});
 
   @override
@@ -48,8 +46,6 @@ class Mainpage extends StatefulWidget {
                       });
                       print(height);
                     },
-
-
                     child: const Icon(Icons.remove, size: 50),
                   ),
                   const SizedBox(width: 50),
@@ -97,3 +93,27 @@ class Mainpage extends StatefulWidget {
           child: const Icon(Icons.remove, size: 50),
         ),
         const SizedBox(width: 50),
+
+        FloatingActionButton(
+          onPressed: () {
+            setState(() {
+            if (weight < 500) weight++;
+            bmi = calculateBMI(
+              height: height,
+              weight: weight,
+              );
+            });
+            print(weight);
+          },
+
+          child: const Icon(Icons.add, size: 50),
+          ),
+      ],
+      ),
+    ],
+    ),
+    ),
+    ],
+    ),
+
+    const SizedBox(height: 80),
