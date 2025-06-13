@@ -117,3 +117,23 @@ class Mainpage extends StatefulWidget {
     ),
 
     const SizedBox(height: 80),
+
+    Row(
+      children: [
+        GestureDetector(
+          onTap: () {
+            print("Male");
+            setState(() {
+              gender = "M";
+            });
+          },
+          child: Container(
+            height: 250,
+            width: 185,
+            decoration: BoxDecoration(
+              color:
+              gender == 'M'
+                  ? Colors.black.withAlpha(100)
+                  : Colors.blueAccent.withAlpha(50),
+              borderRadius: BorderRadius.circular(100),
+              ),
