@@ -137,3 +137,11 @@ class Mainpage extends StatefulWidget {
                   : Colors.blueAccent.withAlpha(50),
               borderRadius: BorderRadius.circular(100),
               ),
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [Icon(Icons.male, size: 150), Text("Male")],
+              ),
+          ),
+        ),
+
+        const Spacer(),
