@@ -145,3 +145,35 @@ class Mainpage extends StatefulWidget {
         ),
 
         const Spacer(),
+
+        GestureDetector(
+          onTap: () {
+            print("Female");
+            setState(() {
+              gender = "F";
+            });
+          },
+          child: Container(
+            height: 250,
+            width: 185,
+            decoration: BoxDecoration(
+              color:
+              gender == 'F'
+                  ? Colors.black.withAlpha(100)
+                  : Colors.blueAccent.withAlpha(50),
+              borderRadius: BorderRadius.circular(100),
+            ),
+
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Icon(Icons.female, size: 150),
+                Text("Female"),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+
+    const SizedBox(height: 50),
