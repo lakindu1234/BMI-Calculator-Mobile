@@ -177,3 +177,26 @@ class Mainpage extends StatefulWidget {
     ),
 
     const SizedBox(height: 50),
+
+        Column(
+          children: [
+            const Text("BMI"),
+            Text(
+              bmi.toStringAsFixed(2),
+              style: kInputLableColor.copyWith(
+                color: kOutputTextcolor,
+                fontSize: 85,
+              ),
+            ),
+
+            Text(getResult(bmi)),
+          ],
+        ),
+
+        ],
+        ),
+        ),
+        ),
+        ),
+    );
+  }
