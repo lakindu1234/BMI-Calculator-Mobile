@@ -13,14 +13,14 @@ class Mainpage extends StatefulWidget {
 
     return Scaffold(
         body: SafeArea(
-        child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14),
-      child: Container(
-      color: Colors.white,
-      child: Column(
-      children: [
+          child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: Container(
+            color: Colors.white,
+            child: Column(
+              children: [
 
-        const SizedBox(height: 20),                // Gender Row
+                const SizedBox(height: 20),                // Gender Row
 
     // Height and Weight Row
     //////////////////////////////////////////////////////////////////////////////
@@ -46,6 +46,7 @@ class Mainpage extends StatefulWidget {
                       });
                       print(height);
                     },
+
                     child: const Icon(Icons.remove, size: 50),
                   ),
                   const SizedBox(width: 50),
@@ -67,9 +68,9 @@ class Mainpage extends StatefulWidget {
             ],
           ),
         ),
-    /////////////////////////////////////////////////////////////////////////
+
     const Spacer(),
-    ////////////////////////////////////////////////////////////////////////
+
 
     Padding(
       padding: const EdgeInsets.all(18.0),
@@ -108,7 +109,7 @@ class Mainpage extends StatefulWidget {
 
           child: const Icon(Icons.add, size: 50),
           ),
-      ],
+        ],
       ),
     ],
     ),
@@ -137,6 +138,7 @@ class Mainpage extends StatefulWidget {
                   : Colors.blueAccent.withAlpha(50),
               borderRadius: BorderRadius.circular(100),
               ),
+
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [Icon(Icons.male, size: 150), Text("Male")],
@@ -153,6 +155,7 @@ class Mainpage extends StatefulWidget {
               gender = "F";
             });
           },
+
           child: Container(
             height: 250,
             width: 185,
@@ -200,3 +203,21 @@ class Mainpage extends StatefulWidget {
         ),
     );
   }
+
+
+
+double calculateBMI({required int height, required int weight}) {
+  return (weight / (height * height)) * 10000;
+}
+
+
+String getResult(bmiValue) {
+  if (bmiValue >= 25) {
+    return 'OverWeight';
+  } else if (bmiValue > 18.5) {
+    return 'Normal';
+  } else {
+    return 'UnderWeight';
+  }
+  }
+}
