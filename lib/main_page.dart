@@ -8,6 +8,15 @@ class Mainpage extends StatefulWidget {
   State<Mainpage> createState() => _MainpageState();
   }
 
+class _MainpageState extends State<Mainpage> {
+  int height = 145;
+  int weight = 70;
+
+  String gender = '';
+
+  late double bmi = calculateBMI(height: height, weight: weight);
+
+
   @override
   Widget build(BuildContext context) {
 
@@ -19,12 +28,9 @@ class Mainpage extends StatefulWidget {
             color: Colors.white,
             child: Column(
               children: [
-
                 const SizedBox(height: 20),                // Gender Row
 
     // Height and Weight Row
-    //////////////////////////////////////////////////////////////////////////////
-
     Row(
       children: [
         Padding(
@@ -49,6 +55,7 @@ class Mainpage extends StatefulWidget {
 
                     child: const Icon(Icons.remove, size: 50),
                   ),
+
                   const SizedBox(width: 50),
                   FloatingActionButton(
                     onPressed: () {
