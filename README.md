@@ -10,3 +10,4 @@ This project is beginner for mobile app development .
 I will implement this mobile app to calculator the BMI of People .
 
 
+Just an app for practice Flutter
