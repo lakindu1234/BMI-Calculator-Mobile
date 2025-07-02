@@ -25,4 +25,4 @@ Just an app for practice Flutter
 ![image](https://github.com/user-attachments/assets/ef4fe7d8-812f-4017-851e-23f322080a69)
 
 This the Final Look of the BMI calculator 
-
+## This is a preview of Pixel 9 Pro mobile 
