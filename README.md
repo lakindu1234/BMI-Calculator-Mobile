@@ -26,3 +26,7 @@ Just an app for practice Flutter
 
 This the Final Look of the BMI calculator 
 ## This is a preview of Pixel 9 Pro mobile 
+
+
+
+So , This is normal and basic mobile that create using Flutter
